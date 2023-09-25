@@ -1,0 +1,22 @@
+.project-cover {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    margin-bottom: 34px;
+    box-shadow: 2px 2px 4px 0px rgba(56, 54, 54, 0.25); 
+}
+
+.project-title {
+    color: #FAF5F1;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .project-cover {
+        margin-bottom: 15px;
+        height: 200px;
+        width: 200px;
+    }
+}
