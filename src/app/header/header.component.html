@@ -1,6 +1,7 @@
 <header class="header">
     <img src="src/img/logo.png" alt="Logo" class="logo">
-    <nav [ngClass]="{'nav_mobile': menuActive, 'header_nav': !menuActive}">
+    <nav [ngClass]="{'nav_mobile': menuActive, 'header_nav': !menuActive}"
+    (click)="detectMenuMobile()">
         <ul [ngClass]="{'nav_mobile_list': menuActive, 'nav_list': !menuActive}">
             <li class="nav_item"><a href="#apresentacao" class="nav_anchor">Quem somos</a></li>
             <li class="nav_item"><a href="#projetos" class="nav_anchor">Nossos projetos</a></li>

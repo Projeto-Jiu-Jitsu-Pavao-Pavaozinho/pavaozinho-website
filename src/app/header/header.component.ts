@@ -15,4 +15,10 @@ export class HeaderComponent {
       this.menuActive = false;
     }
   }
+
+  detectMenuMobile() {
+    if(this.menuActive == true) {
+      this.menuActive = false;
+    }
+  }
 }
