@@ -55,11 +55,33 @@
 }
 
 @media screen and (max-width: 700px) {
+    .header {
+        align-items: baseline;
+    }
+
     .header_nav {
         display: none;
     }
 
     .menu-mobile {
         display: initial;
+    }
+
+    .nav_mobile {
+        display: flex;
+        flex-direction: column;
+        background-color: #262626;
+        position:absolute;
+        left: 0;
+        top: 135px;
+        width: 100%;
+        padding: 0 30px 20px;
+    }
+
+    .nav_mobile_list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 20px;
     }
 }

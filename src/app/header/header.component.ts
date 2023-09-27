@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  menuActive: boolean = false;
 
+  toogleMenu() {
+    if(this.menuActive == false) {
+      this.menuActive = true;
+    } else {
+      this.menuActive = false;
+    }
+  }
 }
