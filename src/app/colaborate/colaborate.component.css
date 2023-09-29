@@ -7,12 +7,23 @@ section {
 }
 
 .colabore-div {
-    width: 70%;
+    width: 90%;
     text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    align-items: center;
 }
 
 @media screen and (max-width: 800px) {
     section {
         font-size: 18px;
+    }
+
+    .cards {
+        flex-wrap: wrap;
     }
 }

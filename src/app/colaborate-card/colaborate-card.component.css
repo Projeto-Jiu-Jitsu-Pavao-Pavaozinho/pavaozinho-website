@@ -1,0 +1,17 @@
+.card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid #797471;
+    padding: 30px 20px;
+    background-color: #262626;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 23px;
+    color: #FFF;
+  }

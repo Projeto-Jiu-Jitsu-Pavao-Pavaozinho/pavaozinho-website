@@ -13,6 +13,7 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { ColaborateComponent } from './colaborate/colaborate.component';
 import { ButtonComponent } from './button/button.component';
+import { ColaborateCardComponent } from './colaborate-card/colaborate-card.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ButtonComponent } from './button/button.component';
     ProjectCardComponent,
     FooterComponent,
     ColaborateComponent,
-    ButtonComponent
+    ButtonComponent,
+    ColaborateCardComponent
   ],
   imports: [
     BrowserModule
