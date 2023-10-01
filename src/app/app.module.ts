@@ -14,6 +14,10 @@ import { FooterComponent } from './footer/footer.component';
 import { ColaborateComponent } from './colaborate/colaborate.component';
 import { ButtonComponent } from './button/button.component';
 import { ColaborateCardComponent } from './colaborate-card/colaborate-card.component';
+import { RouterModule } from '@angular/router';
+import { VoluntariadoComponent } from './pages/voluntariado/voluntariado.component';
+import { DoacaoComponent } from './pages/doacao/doacao.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +33,19 @@ import { ColaborateCardComponent } from './colaborate-card/colaborate-card.compo
     FooterComponent,
     ColaborateComponent,
     ButtonComponent,
-    ColaborateCardComponent
+    ColaborateCardComponent,
+    VoluntariadoComponent,
+    DoacaoComponent,
+    NotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      {path: '', component: HomeComponent},
+      {path: 'voluntariado', component: VoluntariadoComponent},
+      {path: 'doacao', component: DoacaoComponent},
+      {path: '**', component: NotFoundComponent},
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,18 @@
 <header class="header">
-    <img src="assets/logo.png" alt="Logo" class="logo">
+    <a href="">
+        <img src="assets/logo.png" alt="Logo" class="logo">
+    </a>
     <nav [ngClass]="{'nav_mobile': menuActive, 'header_nav': !menuActive}"
     (click)="detectMenuMobile()">
         <ul [ngClass]="{'nav_mobile_list': menuActive, 'nav_list': !menuActive}">
             <li class="nav_item"><a href="#sobre" class="nav_anchor">Quem somos</a></li>
             <li class="nav_item"><a href="#projetos" class="nav_anchor">Nossos projetos</a></li>
-            <li class="nav_item"><a href="#colabore" class="nav_anchor">Como doar</a></li>
+            <li class="nav_item"><a href="#colabore" class="nav_anchor">Colabore</a></li>
             <li class="nav_item"><a href="#" class="nav_anchor">Contato</a></li>
         </ul>
-        <app-button title="Doar agora" bgColor="#FFF" fontColor="#262626"></app-button>
+        <a href="doacao">
+            <app-button title="Doar agora" bgColor="#FFF" fontColor="#262626"></app-button>
+        </a>
     </nav>
     <svg [ngClass]="{'menu-mobile': !menuActive, 'disable': menuActive}" (click)="toogleMenu()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path fill="none" stroke="white" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48" d="M88 152h336M88 256h336M88 360h336"/></svg>
     <svg [ngClass]="{'menu-mobile': menuActive, 'disable': !menuActive}" (click)="toogleMenu()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7l10 10M7 17L17 7"/></svg>

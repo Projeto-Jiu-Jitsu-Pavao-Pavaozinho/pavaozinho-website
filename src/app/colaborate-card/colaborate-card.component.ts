@@ -10,7 +10,7 @@ import { Component, Input } from '@angular/core';
         content="{{paragraph}}" txtAlign='left'>
         </app-section-paragraph>
         <br>
-        <app-button bgColor="#FFF" fontColor="#262626" title="{{btnTitle}}"></app-button>
+        <a href="{{link}}"><app-button href='sobre' bgColor="#FFF" fontColor="#262626" title="{{btnTitle}}"></app-button></a>
       </div>
     </div> 
   `,
@@ -21,4 +21,5 @@ export class ColaborateCardComponent {
   @Input() paragraph: string = "";
   @Input() bgImage: string = "";
   @Input() btnTitle: string = "";
+  @Input() link: string = "";
 }
