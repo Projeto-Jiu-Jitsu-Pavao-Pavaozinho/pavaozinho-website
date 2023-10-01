@@ -3,7 +3,10 @@
     height: 250px;
     width: 250px;
     margin-bottom: 34px;
-    box-shadow: 2px 2px 4px 0px rgba(56, 54, 54, 0.25); 
+    box-shadow: 2px 2px 4px 0px rgba(56, 54, 54, 0.25);
+    filter: grayscale(19%) sepia(18%);
+    -webkit-filter: grayscale(19%) sepia(18%);
+    -moz-filter: grayscale(19%) sepia(18%); 
 }
 
 .project-title {

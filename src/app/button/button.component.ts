@@ -13,6 +13,10 @@ import { Component, Input } from '@angular/core';
       font-size: 20px;
       font-family: 'Hanken Grotesk', sans-serif;
     }
+
+    button:hover {
+      cursor: pointer;
+    }
   `]
 })
 export class ButtonComponent {

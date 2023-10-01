@@ -2,10 +2,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 3px solid #797471;
     padding: 30px 20px;
+    height: 250px;
     background-color: #262626;
     justify-content: space-between;
+    border-radius: 20px;
+    -webkit-box-shadow: 9px 10px 53px -22px rgba(38,38,38,1);
+    -moz-box-shadow: 9px 10px 53px -22px rgba(38,38,38,1);
+    box-shadow: 9px 10px 53px -22px rgba(38,38,38,1);
 }
 
 h1 {
