@@ -1,0 +1,22 @@
+section {
+    background-color: #262626;
+    padding: 5% 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    overflow: scroll;
+}
+
+img {
+    width: 300px;
+}
+
+@media screen and (max-width: 1220px) {
+    section {
+        gap: 15px;
+    }
+
+    img {
+        width: 300px;
+    }
+}
