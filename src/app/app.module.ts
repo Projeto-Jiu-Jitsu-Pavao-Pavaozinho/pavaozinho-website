@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PageCoverComponent } from './page-cover/page-cover.component';
@@ -40,6 +41,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
+    NgbModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'voluntariado', component: VoluntariadoComponent},
