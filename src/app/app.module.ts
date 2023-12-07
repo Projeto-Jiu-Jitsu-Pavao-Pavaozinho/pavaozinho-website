@@ -19,6 +19,9 @@ import { RouterModule } from '@angular/router';
 import { VoluntariadoComponent } from './pages/voluntariado/voluntariado.component';
 import { DoacaoComponent } from './pages/doacao/doacao.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { GaleryComponent } from './galery/galery.component';
+import { ModalContentComponent } from './modal-content/modal-content.component';
+import { ImageComponent } from './image/image.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     ColaborateCardComponent,
     VoluntariadoComponent,
     DoacaoComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    GaleryComponent,
+    ModalContentComponent,
+    ImageComponent
   ],
   imports: [
     BrowserModule,

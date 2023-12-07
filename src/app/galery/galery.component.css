@@ -5,18 +5,11 @@ section {
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     overflow: scroll;
-}
-
-img {
-    width: 300px;
+    row-gap: 15px;
 }
 
 @media screen and (max-width: 1220px) {
     section {
         gap: 15px;
-    }
-
-    img {
-        width: 300px;
     }
 }
