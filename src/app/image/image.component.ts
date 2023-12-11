@@ -12,6 +12,10 @@ import { ModalContentComponent } from '../modal-content/modal-content.component'
     width: 300px;
   }
 
+  img:hover {
+    cursor: pointer;
+  }
+
   @media screen and (max-width: 1220px) {
 
     img {
