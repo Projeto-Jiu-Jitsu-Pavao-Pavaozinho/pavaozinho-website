@@ -22,6 +22,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { GaleryComponent } from './galery/galery.component';
 import { ModalContentComponent } from './modal-content/modal-content.component';
 import { ImageComponent } from './image/image.component';
+import { WhatsappButtonComponent } from './whatsapp-button/whatsapp-button.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ImageComponent } from './image/image.component';
     NotFoundComponent,
     GaleryComponent,
     ModalContentComponent,
-    ImageComponent
+    ImageComponent,
+    WhatsappButtonComponent
   ],
   imports: [
     BrowserModule,

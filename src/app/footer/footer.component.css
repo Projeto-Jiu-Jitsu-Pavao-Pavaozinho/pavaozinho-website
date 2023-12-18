@@ -1,6 +1,6 @@
 .footer-nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 32px;
     row-gap: 32px;
     padding: 40px 10%;
@@ -29,6 +29,14 @@
     gap: 25px;
 }
 
+.endereco {
+    grid-column: span 3;
+}
+
+.map {
+    width: 100%;
+}
+
 .footer-span {
     padding: 30px 10px;
     text-align: center;
@@ -37,7 +45,7 @@
     font-family: 'Hanken Grotesk', sans-serif;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .footer-nav {
         grid-template-columns: repeat(2, 2fr);
         gap: 15px;
@@ -54,5 +62,8 @@
 @media screen and (max-width: 540px) {
     .footer-nav {
         padding: 20px 5%;
+        grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column;
     }
 }
