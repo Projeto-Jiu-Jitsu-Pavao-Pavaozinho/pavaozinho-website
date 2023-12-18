@@ -2,14 +2,25 @@
     background-color: #262626;
     display: flex;
     justify-content: space-between;
-    padding: 24px 30px;
+    padding: 12px 30px;
     align-items: center;
     font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.logotipo {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
     width: 70px;
     height: 70px;
+}
+
+.title {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 23px;
 }
 
 .header_nav {
