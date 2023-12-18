@@ -5,11 +5,11 @@ import { ModalContentComponent } from '../modal-content/modal-content.component'
 @Component({
   selector: 'app-image',
   template: `
-    <img [src]="url" (click)="open()">
+    <img class="rounded mx-auto" [src]="url" (click)="open()">
   `,
   styles: [`
   img {
-    width: 300px;
+    height: 200px;
   }
 
   img:hover {

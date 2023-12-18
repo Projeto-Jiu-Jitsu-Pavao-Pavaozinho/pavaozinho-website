@@ -3,13 +3,6 @@ section {
     padding: 5% 2.5%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-content: space-between;
     overflow: scroll;
-    row-gap: 15px;
-}
-
-@media screen and (max-width: 1220px) {
-    section {
-        gap: 15px;
-    }
+    gap: 15px;
 }
