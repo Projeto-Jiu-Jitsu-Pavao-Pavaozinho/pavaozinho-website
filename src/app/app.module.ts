@@ -41,10 +41,10 @@ import { WhatsappButtonComponent } from './whatsapp-button/whatsapp-button.compo
     BrowserModule,
     NgbModule,
     RouterModule.forRoot([
-      {path: '', component: HomeComponent, title: "Pavãozinho" },
-      {path: 'voluntariado', component: VoluntariadoComponent, title: "Pavãozinho | Voluntariado"},
-      {path: 'doacao', component: DoacaoComponent, title: "Pavãozinho | Como doar"},
-      {path: '**', component: NotFoundComponent, title: "Pavãozinho | Pagina não encontrada"},
+      {path: '', component: HomeComponent},
+      {path: 'voluntariado', component: VoluntariadoComponent, title: "Voluntariado | Projeto Social Pavão-Pavãozinho"},
+      {path: 'doacao', component: DoacaoComponent, title: "Como doar | Projeto Social Pavão-Pavãozinho"},
+      {path: '**', component: NotFoundComponent, title: "Pagina não encontrada | Projeto Social Pavão-Pavãozinho"},
     ]),
     RouterLink,
     RouterLinkActive
