@@ -1,4 +1,4 @@
-main {
+article {
     padding: 100px 10%;
     background: #FAF5F1;
     display: flex;
@@ -7,7 +7,7 @@ main {
 }
 
 @media screen and (max-width: 800px) {
-    main {
+    article {
         font-size: 18px;
     }
 }
