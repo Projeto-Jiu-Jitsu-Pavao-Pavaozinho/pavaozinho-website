@@ -5,10 +5,8 @@ import { Component, Input } from '@angular/core';
   template: `
     <div class="card">
       <div class="filter">
-        <h1>{{title}}</h1>
-        <app-section-paragraph pColor="#FFF"
-        content="{{paragraph}}" txtAlign='left'>
-        </app-section-paragraph>
+        <h3>{{title}}</h3>
+        <p class="paragraph">{{paragraph}}</p>
         <br>
         <a href="{{link}}"><app-button href='sobre' bgColor="#FFF" fontColor="#262626" title="{{btnTitle}}"></app-button></a>
       </div>

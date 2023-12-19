@@ -4,15 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 import { PageCoverComponent } from './page-cover/page-cover.component';
-import { AboutComponent } from './about/about.component';
-import { SectionTitleComponent } from './section-title/section-title.component';
-import { SectionParagraphComponent } from './section-paragraph/section-paragraph.component';
-import { ProjectsComponent } from './projects/projects.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
 import { FooterComponent } from './footer/footer.component';
-import { ColaborateComponent } from './colaborate/colaborate.component';
 import { ButtonComponent } from './button/button.component';
 import { ColaborateCardComponent } from './colaborate-card/colaborate-card.component';
 import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
@@ -30,13 +25,8 @@ import { WhatsappButtonComponent } from './whatsapp-button/whatsapp-button.compo
     HeaderComponent,
     HomeComponent,
     PageCoverComponent,
-    AboutComponent,
-    SectionTitleComponent,
-    SectionParagraphComponent,
-    ProjectsComponent,
     ProjectCardComponent,
     FooterComponent,
-    ColaborateComponent,
     ButtonComponent,
     ColaborateCardComponent,
     VoluntariadoComponent,

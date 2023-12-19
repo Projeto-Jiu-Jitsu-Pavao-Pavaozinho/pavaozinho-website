@@ -1,0 +1,50 @@
+section {
+    padding: 150px 10%;
+}
+
+.white-bg {
+    background-color: #FAF5F1;
+}
+
+.black-bg {
+    background-color: #262626;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 23px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.colabore-container {
+    width: 90%;
+    text-align: center;
+}
+
+.colabore-cards {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    section {
+        padding: 100px 5%;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 34px;
+    }
+
+    .colabore-cards {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,26 @@
+.standard-title {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 23px;
+  }
+
+  .black-text {
+    color: #262626;
+  }
+
+  .white-text {
+    color: #FFF;
+  }
+
+  .standard-paragraph {
+    font-size: 25px;
+    font-weight: 300;
+    text-align: justify;
+  }
+
+  @media screen and (max-width: 800px) {
+    .standard-title {
+        font-size: 35px;
+    }
+  }

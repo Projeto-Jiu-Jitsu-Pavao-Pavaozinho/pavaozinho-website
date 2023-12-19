@@ -12,10 +12,17 @@
     box-shadow: 9px 10px 53px -22px rgba(38,38,38,1);
 }
 
-h1 {
+h3 {
     font-size: 35px;
     text-align: center;
     font-weight: 500;
     margin-bottom: 23px;
     color: #FFF;
   }
+
+.paragraph {
+    font-size: 25px;
+    font-weight: 300;
+    text-align: justify;
+    color: #FFF;
+}
