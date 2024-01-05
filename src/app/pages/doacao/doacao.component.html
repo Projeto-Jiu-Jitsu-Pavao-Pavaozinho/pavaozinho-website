@@ -1,8 +1,6 @@
 <article>
-    <h2 class="standard-title black-title">Como doar</h2>
-    <p class="standard-paragraph black-text">Nosso compromisso vai além do presente. Ao capacitar jovens e adultos através dessas disciplinas, aspiramos a construir não apenas praticantes dedicados, mas também profissionais no esporte. Estamos moldando o futuro, onde cada aluno tem a oportunidade de trilhar um caminho promissor.</p>
-    <hr>
-    <p class="standard-paragraph black-text">Junte-se a nós na jornada para cultivar caráter, habilidades e sonhos na comunidade Pavão-Pavãozinho. Juntos, estamos construindo um legado de força, resiliência e sucesso.</p>
+    <h2 class="standard-title black-title">{{article.data.page.titulo}}</h2>
+    <div [innerHTML]="article.data.page.corpo" class="article-body"></div>
     <hr>
     <div class="card" style="width: 150px;">
         <img class="card-img-top" src="../../../assets/default-cover.svg" alt="">

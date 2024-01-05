@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -18,6 +19,7 @@ import { GaleryComponent } from './galery/galery.component';
 import { ModalContentComponent } from './modal-content/modal-content.component';
 import { ImageComponent } from './image/image.component';
 import { WhatsappButtonComponent } from './whatsapp-button/whatsapp-button.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { WhatsappButtonComponent } from './whatsapp-button/whatsapp-button.compo
       {path: '**', component: NotFoundComponent, title: "Pagina não encontrada | Projeto Social Pavão-Pavãozinho"},
     ]),
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

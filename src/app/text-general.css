@@ -19,6 +19,12 @@
     text-align: justify;
   }
 
+  .article-body {
+    font-size: 25px;
+    font-weight: 300;
+    text-align: justify;
+  }
+
   @media screen and (max-width: 800px) {
     .standard-title {
         font-size: 35px;
