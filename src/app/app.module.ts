@@ -20,6 +20,7 @@ import { ModalContentComponent } from './modal-content/modal-content.component';
 import { ImageComponent } from './image/image.component';
 import { WhatsappButtonComponent } from './whatsapp-button/whatsapp-button.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent as BlogHome } from './blog/home/home.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { FormsModule } from '@angular/forms';
       {path: '', component: HomeComponent},
       {path: 'voluntariado', component: VoluntariadoComponent, title: "Voluntariado | Projeto Social Pavão-Pavãozinho"},
       {path: 'doacao', component: DoacaoComponent, title: "Como doar | Projeto Social Pavão-Pavãozinho"},
+      {path: 'blog', component: BlogHome, title: "Blog | Projeto Social Pavão-Pavãozinho"},
       {path: '**', component: NotFoundComponent, title: "Pagina não encontrada | Projeto Social Pavão-Pavãozinho"},
     ]),
     RouterLink,
