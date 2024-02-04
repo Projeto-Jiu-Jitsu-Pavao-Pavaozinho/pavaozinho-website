@@ -20,7 +20,10 @@ import { ModalContentComponent } from './modal-content/modal-content.component';
 import { ImageComponent } from './image/image.component';
 import { WhatsappButtonComponent } from './whatsapp-button/whatsapp-button.component';
 import { FormsModule } from '@angular/forms';
+
+//blog module
 import { HomeComponent as BlogHome } from './blog/home/home.component';
+import { BlogModule } from './blog/blog.module';
 
 @NgModule({
   declarations: [
@@ -53,7 +56,8 @@ import { HomeComponent as BlogHome } from './blog/home/home.component';
     RouterLink,
     RouterLinkActive,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BlogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
