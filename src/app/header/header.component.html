@@ -1,20 +1,53 @@
 <header class="header">
-    <a class="logotipo" href="">
-        <img src="assets/logo.png" alt="Logo" class="logo">
-        <h1 class="title">Projeto Social Pavão-Pavãozinho</h1>
-    </a>
-    <nav [ngClass]="{'nav_mobile': menuActive, 'header_nav': !menuActive}"
-    (click)="detectMenuMobile()">
-        <ul [ngClass]="{'nav_mobile_list': menuActive, 'nav_list': !menuActive}">
-            <li class="nav_item"><a href="#sobre" class="nav_anchor">Quem somos</a></li>
-            <li class="nav_item"><a href="#projetos" class="nav_anchor">Nossos projetos</a></li>
-            <li class="nav_item"><a href="#colabore" class="nav_anchor">Colabore</a></li>
-        </ul>
-        <a routerLink="doacao" araiaCurrentWhenActive="page">
-            <app-button title="Doar agora" bgColor="#FFF" fontColor="#262626"></app-button>
-        </a>
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="../../assets/logo.png" height="70" alt="Logo da ONG">
+                Projeto Social Pavão-Pavãozinho
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                aria-controls="navbarContent"
+                [attr.aria-expanded]="!collapsed"
+                aria-label="Toggle navigation"
+                (click)="collapsed = !collapsed"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item" ngbDropdown>
+                        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">Sobre</a>
+                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Quem somos</a>
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Trabalhe conosco</a>
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Nosso time</a>
+                        </div>
+                    </li>
+                    <li class="nav-item" ngbDropdown>
+                        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button">Projetos</a>
+                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Action</a>
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Another action</a>
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item" ngbDropdown>
+                        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">Transparência</a>
+                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Estatuto</a>
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Atas</a>
+                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Relatórios financeiros</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" tabindex="0" role="button" routerLink="/blog">Blog</a>
+                    </li>
+                    <button type="button" class="btn btn-primary btn-sm">Doar agora</button>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <svg [ngClass]="{'menu-mobile': !menuActive, 'disable': menuActive}" (click)="toogleMenu()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512"><path fill="none" stroke="white" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48" d="M88 152h336M88 256h336M88 360h336"/></svg>
-    <svg [ngClass]="{'menu-mobile': menuActive, 'disable': !menuActive}" (click)="toogleMenu()" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7l10 10M7 17L17 7"/></svg>
-
 </header>

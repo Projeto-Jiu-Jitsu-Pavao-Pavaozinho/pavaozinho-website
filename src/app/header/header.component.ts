@@ -8,17 +8,5 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   menuActive: boolean = false;
 
-  toogleMenu() {
-    if(this.menuActive == false) {
-      this.menuActive = true;
-    } else {
-      this.menuActive = false;
-    }
-  }
-
-  detectMenuMobile() {
-    if(this.menuActive == true) {
-      this.menuActive = false;
-    }
-  }
+  public collapsed = false;
 }
