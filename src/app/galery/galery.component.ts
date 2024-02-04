@@ -3,7 +3,7 @@ import { Component, inject } from '@angular/core';
 @Component({
   selector: 'app-galery',
   templateUrl: './galery.component.html',
-  styleUrls: ['./galery.component.css']
+  styleUrls: ['./galery.component.css', '../text-general.css']
 })
 export class GaleryComponent {
 
