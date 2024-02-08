@@ -33,6 +33,10 @@ section {
     align-items: center;
 }
 
+.parceiros-item {
+    width: 150px;
+}
+
 @media screen and (max-width: 800px) {
     section {
         padding: 100px 5%;
