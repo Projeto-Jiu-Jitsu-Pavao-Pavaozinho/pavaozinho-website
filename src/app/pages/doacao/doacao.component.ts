@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { end } from '@popperjs/core';
-import { Article } from 'src/app/blog/models/article';
+import { Article } from 'src/app/module/article';
 import { DatoService } from 'src/app/services/dato.service';
 
 @Component({
