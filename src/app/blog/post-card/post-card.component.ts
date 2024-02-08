@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { BlogPostCard } from '../models/blog-post-card';
+import { BlogPost } from '../models/blog-post';
 
 @Component({
   selector: 'app-post-card',
@@ -7,5 +7,5 @@ import { BlogPostCard } from '../models/blog-post-card';
   styleUrls: ['./post-card.component.css']
 })
 export class PostCardComponent {
-  @Input() public  cardContent: BlogPostCard | any;
+  @Input() public  cardContent: BlogPost | any;
 }
