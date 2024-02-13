@@ -4,26 +4,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
-import { PageCoverComponent } from './page-cover/page-cover.component';
+import { PageCoverComponent } from './components/page-cover/page-cover.component';
 import { ProjectCardComponent } from './project-card/project-card.component';
-import { FooterComponent } from './footer/footer.component';
-import { ButtonComponent } from './button/button.component';
-import { ColaborateCardComponent } from './colaborate-card/colaborate-card.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ButtonComponent } from './components/button/button.component';
+import { ColaborateCardComponent } from './components/colaborate-card/colaborate-card.component';
 import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { VoluntariadoComponent } from './pages/voluntariado/voluntariado.component';
 import { DoacaoComponent } from './pages/doacao/doacao.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { GaleryComponent } from './galery/galery.component';
-import { ModalContentComponent } from './modal-content/modal-content.component';
-import { ImageComponent } from './image/image.component';
-import { WhatsappButtonComponent } from './whatsapp-button/whatsapp-button.component';
+import { GaleryComponent } from './components/galery/galery.component';
+import { ModalContentComponent } from './components/modal-content/modal-content.component';
+import { ImageComponent } from './components/image/image.component';
+import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-button.component';
 import { FormsModule } from '@angular/forms';
-
-//blog module
-import { HomeComponent as BlogHome } from './blog/home/home.component';
-import { BlogModule } from './blog/blog.module';
 
 @NgModule({
   declarations: [
@@ -50,14 +46,13 @@ import { BlogModule } from './blog/blog.module';
       {path: '', component: HomeComponent},
       {path: 'voluntariado', component: VoluntariadoComponent, title: "Voluntariado | Projeto Social Pavão-Pavãozinho"},
       {path: 'doacao', component: DoacaoComponent, title: "Como doar | Projeto Social Pavão-Pavãozinho"},
-      {path: 'blog', component: BlogHome, title: "Blog | Projeto Social Pavão-Pavãozinho"},
+      {path: 'blog', loadChildren: ()=> import('./blog/blog.module').then(m => m.BlogModule) },
       {path: '**', component: NotFoundComponent, title: "Pagina não encontrada | Projeto Social Pavão-Pavãozinho"},
     ]),
     RouterLink,
     RouterLinkActive,
     HttpClientModule,
-    FormsModule,
-    BlogModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

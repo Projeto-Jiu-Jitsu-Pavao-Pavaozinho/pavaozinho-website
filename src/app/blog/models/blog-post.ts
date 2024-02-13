@@ -1,7 +1,8 @@
 export interface BlogPost {
     titulo: string,
-    corpo: string, 
-    paragrafos: Array<string>,
+    slug: string,
+    _firstPublishedAt: string,
+    corpo: any,
     capa: {
         url: string,
     }

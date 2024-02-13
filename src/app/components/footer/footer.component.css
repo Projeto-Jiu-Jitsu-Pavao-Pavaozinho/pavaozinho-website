@@ -4,8 +4,7 @@
     column-gap: 32px;
     row-gap: 32px;
     padding: 40px 10%;
-    background-color: #262626;
-    border-top: 3px solid #797471;
+    background-color: #000000;
 }
 
 .list-title {
@@ -40,9 +39,10 @@
 .footer-span {
     padding: 30px 10px;
     text-align: center;
-    background-color: #797471;
+    background-color: #000000;
     display: block;
     font-family: 'Hanken Grotesk', sans-serif;
+    color: #FFF;
 }
 
 @media screen and (max-width: 900px) {
