@@ -11,11 +11,18 @@ import { DatePipe } from '@angular/common';
     <article class="container my-5">
       <h2 [innerHTML]="post?.titulo"></h2>
       <p>Postado em: {{date}}</p>
-      <img class="img-fluid mb-4" [src]="post?.capa?.url" alt="">
-      <div class="fs-4" [innerHTML]="post?.corpo"></div>
+      <img class="img-fluid mb-2" [src]="post?.capa?.url" [alt]="post?.capa?.alt">
+      <p class="img-alt mb-5">{{post?.capa?.alt}}</p>
+      <div class="fs-5" [innerHTML]="post?.corpo"></div>
     </article>
   `,
-  styles: ['']
+  styles: [`
+    .img-alt {
+      color: #1E1E1E80;
+      wight: 400;
+      font-size: 14px;
+    }
+  `]
 })
 export class BlogPostComponent implements OnInit {
   public post: BlogPost | undefined;

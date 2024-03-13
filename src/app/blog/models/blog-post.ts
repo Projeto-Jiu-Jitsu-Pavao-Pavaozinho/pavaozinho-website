@@ -5,5 +5,6 @@ export interface BlogPost {
     corpo: any,
     capa: {
         url: string,
+        alt: string
     }
 }

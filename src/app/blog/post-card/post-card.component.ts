@@ -8,7 +8,7 @@ import { DatePipe } from '@angular/common';
     <a [routerLink]='"post/" + cardContent?.slug'>
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
-                <img class="img-fluid rounded" [src]="cardContent?.capa?.url" alt="" style="width: 100%; height: 100%;">
+                <img class="img-fluid rounded" [src]="cardContent?.capa?.url" [alt]="cardContent?.capa?.alt" style="width: 100%; height: 100%;">
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title">{{cardContent?.titulo}}</h5>
