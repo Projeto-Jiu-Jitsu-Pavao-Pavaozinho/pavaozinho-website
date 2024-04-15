@@ -37,6 +37,37 @@ section {
     width: 150px;
 }
 
+.newsletter {
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px
+}
+
+.email-input {
+    padding: 5px 10px;
+    border: 1px solid #262626;
+    background-color: transparent;
+}
+
+.submit-button {
+    border: none;
+    text-transform: uppercase;
+    background-color: #262626;
+    color: #FAF5F1;
+    border-radius: 10px;
+    width: 115px;
+    padding: 15px;
+}
+
+.alert {
+    margin-top: 15px;
+}
+
 @media screen and (max-width: 800px) {
     section {
         padding: 100px 5%;
@@ -50,5 +81,9 @@ section {
 
     .colabore-cards {
         flex-wrap: wrap;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
     }
 }

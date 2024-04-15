@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css', '../../text-general.css']
 })
 export class HomeComponent {
+  public newsletterSubSuccess: boolean = false;
 
+  public toogleNewsletterAlert() {
+    this.newsletterSubSuccess = !this.newsletterSubSuccess;
+  }
 }

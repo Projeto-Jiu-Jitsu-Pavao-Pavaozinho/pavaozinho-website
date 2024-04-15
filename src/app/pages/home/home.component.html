@@ -32,6 +32,19 @@
     </div>
 </section>
 <app-galery></app-galery>
+<section class="white-bg newsletter">
+  <h2 class="standard-title black-text">Assine nossa newsletter</h2>
+  <p>Fique por dentro das novidades!</p>
+  <form class="newsletter-form" action="">
+    <input class="email-input" type="email" name="email" id="">
+    <button class="submit-button" type="submit" (click)="toogleNewsletterAlert()">Assinar</button>
+  </form>
+  <ng-template [ngIf]="newsletterSubSuccess">
+    <div class="alert alert-success">Incrição realizada com sucesso!
+      <button (click)="toogleNewsletterAlert()" type="button" class="btn-close"></button>
+    </div>
+  </ng-template>
+</section>
 <section class="white-bg">
     <h2 class="standard-title black-text">Parceiros</h2>
     <div class="container text-center">
