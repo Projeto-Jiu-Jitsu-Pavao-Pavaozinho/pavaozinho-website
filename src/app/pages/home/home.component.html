@@ -22,7 +22,7 @@
         <div class="colabore-cards">
             <app-colaborate-card title="Faça uma doação de qualquer valor"
             paragraph="Ajude à Pavãozinho custear suas atividades e continuar impactando vidas."
-            btnTitle="Doar" link="doacao"
+            btnTitle="Doar" link="https://www.paypal.com/donate/?hosted_button_id=QXESBRFF9WWEL"
             ></app-colaborate-card>
             <app-colaborate-card title="Venha fazer parte do nosso time"
             paragraph="Venha contribuir com nosso time de talentos, fanzendo o projeto acontecer."
@@ -36,8 +36,15 @@
   <h2 class="standard-title black-text">Assine nossa newsletter</h2>
   <p>Fique por dentro das novidades!</p>
   <form class="newsletter-form" action="">
-    <input class="email-input" type="email" name="email" id="">
-    <button class="submit-button" type="submit" (click)="toogleNewsletterAlert()">Assinar</button>
+    <input [(ngModel)]="emailInput" class="email-input" type="email" name="email" id="">
+    <button class="submit-button" [ngClass]="{'disabled': ongoin}" type="submit" (click)="newsletterSubscribe(emailInput)">
+      <ng-template [ngIf]="!ongoin">
+        <span>Assinar</span>
+      </ng-template>
+      <ng-template [ngIf]="ongoin">
+        <span class="spinner-border spinner-border-sm"></span>
+      </ng-template>
+    </button>
   </form>
   <ng-template [ngIf]="newsletterSubSuccess">
     <div class="alert alert-success">Incrição realizada com sucesso!
