@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { HttpStatusCode } from '@angular/common/http';
+import { Component, WritableSignal} from '@angular/core';
 import { NewsletterService } from 'src/app/services/newsletter.service';
 
 @Component({
@@ -7,25 +8,19 @@ import { NewsletterService } from 'src/app/services/newsletter.service';
   styleUrls: ['./home.component.css', '../../text-general.css']
 })
 export class HomeComponent {
-  public newsletterSubSuccess: boolean = false;
   public emailInput: string = "";
-  public ongoin: boolean = false;
+  public ongoin: WritableSignal<boolean> = this.newsletterService.ongoin;
+  public status: WritableSignal<HttpStatusCode> = this.newsletterService.responseStatus;
 
   public constructor(private newsletterService: NewsletterService) {}
 
-  public toogleNewsletterAlert() {
-    this.newsletterSubSuccess = !this.newsletterSubSuccess;
+  public newsletterSubscribe(email: String) {
+    if(email != "" && !this.ongoin()) {
+      this.newsletterService.subscribe(email);
+    }
   }
 
-  public newsletterSubscribe(email: String) {
-    if(email != "") {
-      this.newsletterSubSuccess = false;
-      this.ongoin = true;
-      this.newsletterService.subscribe(email).subscribe({
-        next: res => {this.newsletterSubSuccess = true; this.emailInput = ""},
-        error: err => {this.ongoin = false; console.log(err.status)},
-        complete: () => this.ongoin = false,
-      });
-    }
+  public closeAlert() {
+    this.status.update(() => HttpStatusCode.Unused);
   }
 }

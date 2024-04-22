@@ -37,20 +37,33 @@
   <p>Fique por dentro das novidades!</p>
   <form class="newsletter-form" action="">
     <input [(ngModel)]="emailInput" class="email-input" type="email" name="email" id="">
-    <button class="submit-button" [ngClass]="{'disabled': ongoin}" type="submit" (click)="newsletterSubscribe(emailInput)">
-      <ng-template [ngIf]="!ongoin">
+    <button class="submit-button" type="submit" (click)="newsletterSubscribe(emailInput)">
+      <div *ngIf="!ongoin(); then content else stoped"></div>
+      <ng-template #content>
         <span>Assinar</span>
       </ng-template>
-      <ng-template [ngIf]="ongoin">
+      <ng-template #stoped>
         <span class="spinner-border spinner-border-sm"></span>
       </ng-template>
     </button>
   </form>
-  <ng-template [ngIf]="newsletterSubSuccess">
-    <div class="alert alert-success">Incrição realizada com sucesso!
-      <button (click)="toogleNewsletterAlert()" type="button" class="btn-close"></button>
-    </div>
-  </ng-template>
+  <div *ngIf="status() != 306" [ngSwitch]="status()">
+    <ng-container *ngSwitchCase="201">
+      <div class="alert alert-success">Incrição realizada com sucesso!
+        <button (click)="closeAlert()" type="button" class="btn-close"></button>
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="409">
+      <div class="alert alert-warning">Este e-mail já está cadastrado
+        <button (click)="closeAlert()" type="button" class="btn-close"></button>
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="500">
+      <div class="alert alert-warning">Estamos tendo problemas com o servidor. Tente novamente mais tarde
+        <button (click)="closeAlert()" type="button" class="btn-close"></button>
+      </div>
+    </ng-container>
+  </div>
 </section>
 <section class="white-bg">
     <h2 class="standard-title black-text">Parceiros</h2>
