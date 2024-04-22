@@ -6,7 +6,7 @@ import { Injectable, WritableSignal, signal } from '@angular/core';
 })
 export class NewsletterService {
   public ongoin: WritableSignal<boolean> = signal(false);
-  public responsStatus: WritableSignal<HttpStatusCode> = signal(HttpStatusCode.Processing);
+  public responseStatus: WritableSignal<HttpStatusCode> = signal(HttpStatusCode.Unused);
 
   private url: string = "https://newsletter-jm47.onrender.com";
 
@@ -20,14 +20,15 @@ export class NewsletterService {
     }
 
     this.http.post<any>(`${this.url}`, body).subscribe({
-      next: res => {this.responsStatus.update(() => HttpStatusCode.Created)},
+      next: () => {
+        this.responseStatus.update(() => HttpStatusCode.Created);
+      },
       error: err => {
         this.ongoin.update(() => false);
         if(err.status == 409) {
-          this.responsStatus.update(() => HttpStatusCode.Conflict);
-          console.log(this.responsStatus());
+          this.responseStatus.update(() => HttpStatusCode.Conflict);
         } else {
-          this.responsStatus.update(() => HttpStatusCode.InternalServerError);
+          this.responseStatus.update(() => HttpStatusCode.InternalServerError);
         }
       },
       complete: () => this.ongoin.update(() => false)
