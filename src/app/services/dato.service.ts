@@ -16,7 +16,7 @@ export class DatoService{
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': `Bearer ${environment.datoToken}`
+      'Authorization': `Bearer ${process.env['NG_APP_DATO_KEY']}`
     })
   }
 
