@@ -1,6 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment.development';
 import { Article } from '../models/article';
 import { BlogPost } from '../blog/models/blog-post';
 import { Observable } from 'rxjs';
