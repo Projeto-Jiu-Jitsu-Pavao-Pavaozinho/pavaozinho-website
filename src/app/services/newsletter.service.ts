@@ -8,7 +8,7 @@ export class NewsletterService {
   public ongoin: WritableSignal<boolean> = signal(false);
   public responseStatus: WritableSignal<HttpStatusCode> = signal(HttpStatusCode.Unused);
 
-  private url: string = "https://newsletter-jm47.onrender.com";
+  private url: string = "https://newsletter-h12u.onrender.com";
 
   constructor(private http: HttpClient) { }
 
