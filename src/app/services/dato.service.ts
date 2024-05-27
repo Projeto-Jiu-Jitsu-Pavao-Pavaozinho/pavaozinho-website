@@ -37,7 +37,7 @@ export class DatoService{
   }
 
   public getPostBySlug(slug: string): Observable<any> {
-    const query = `{ post(filter: {slug: {eq: "${slug}"}}) { id, slug, _firstPublishedAt, titulo, corpo, capa{ url, alt } } }`
+    const query = `{ post(filter: {slug: {eq: "${slug}"}}) { id, slug, _firstPublishedAt, titulo, corpo, capa{ url, alt }, _seoMetaTags{ tag, content, attributes } } }`
     return this.http.get<BlogPost[]>(`${this.url}?query=${encodeURIComponent(query)}`, this.httpOptions);
   }
 }
