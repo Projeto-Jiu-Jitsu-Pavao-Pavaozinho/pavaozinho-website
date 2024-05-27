@@ -38,8 +38,11 @@ export class BlogPostComponent implements OnInit {
         this.post = res.data.post;
         this.title.setTitle(this.post?.titulo + ' | Blog Pavãozinho');
         this.date = this.datePipe.transform(this.post?._firstPublishedAt, 'dd/MM/yyyy hh:mm a');
-        console.log(this.post?._firstPublishedAt);
-        this.meta.addTag({name: 'title', content: 'Testando'});
+        this.post?._seoMetaTags.forEach((tag) => {
+          if(tag.tag == 'meta') {
+            this.meta.addTag({name: tag.attributes.name || tag.attributes.property, content: tag.attributes.content});
+          }
+        });
       },
       error: err => console.log(err)
     });
