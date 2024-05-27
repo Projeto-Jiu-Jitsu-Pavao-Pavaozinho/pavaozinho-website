@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { DatoService } from 'src/app/services/dato.service';
 import { BlogPost } from '../../models/blog-post';
@@ -29,7 +29,7 @@ export class BlogPostComponent implements OnInit {
   public date: string | null = '';
 
   constructor(private blogService: DatoService, private activatedRoute: ActivatedRoute,
-    private title: Title, private datePipe: DatePipe) {}
+    private title: Title, private datePipe: DatePipe, private meta: Meta) {}
 
   public ngOnInit(): void {
     const postSlug = this.activatedRoute.snapshot.params['slug'];
@@ -39,6 +39,7 @@ export class BlogPostComponent implements OnInit {
         this.title.setTitle(this.post?.titulo + ' | Blog Pavãozinho');
         this.date = this.datePipe.transform(this.post?._firstPublishedAt, 'dd/MM/yyyy hh:mm a');
         console.log(this.post?._firstPublishedAt);
+        this.meta.addTag({name: 'title', content: 'Testando'});
       },
       error: err => console.log(err)
     });
