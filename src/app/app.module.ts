@@ -43,12 +43,14 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     NgbModule,
     RouterModule.forRoot([
-      {path: '', component: HomeComponent},
-      {path: 'voluntariado', component: VoluntariadoComponent, title: "Voluntariado | Projeto Social Pavão-Pavãozinho"},
-      {path: 'doacao', component: DoacaoComponent, title: "Como doar | Projeto Social Pavão-Pavãozinho"},
-      {path: 'blog', loadChildren: ()=> import('./blog/blog.module').then(m => m.BlogModule) },
-      {path: '**', component: NotFoundComponent, title: "Pagina não encontrada | Projeto Social Pavão-Pavãozinho"},
-    ]),
+    { path: '', component: HomeComponent },
+    { path: 'voluntariado', component: VoluntariadoComponent, title: "Voluntariado | Projeto Social Pavão-Pavãozinho" },
+    { path: 'doacao', component: DoacaoComponent, title: "Como doar | Projeto Social Pavão-Pavãozinho" },
+    { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
+    { path: '**', component: NotFoundComponent, title: "Pagina não encontrada | Projeto Social Pavão-Pavãozinho" },
+], {
+    initialNavigation: 'enabledBlocking'
+}),
     RouterLink,
     RouterLinkActive,
     HttpClientModule,

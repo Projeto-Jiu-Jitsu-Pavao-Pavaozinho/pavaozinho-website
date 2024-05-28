@@ -38,7 +38,7 @@
         "build": {
           "builder": "@ngx-env/builder:browser",
           "options": {
-            "outputPath": "dist/pavaozinho",
+            "outputPath": "dist/pavaozinho/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -118,6 +118,60 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/pavaozinho/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "pavaozinho:build:development",
+              "serverTarget": "pavaozinho:server:development"
+            },
+            "production": {
+              "browserTarget": "pavaozinho:build:production",
+              "serverTarget": "pavaozinho:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "pavaozinho:build:production",
+              "serverTarget": "pavaozinho:server:production"
+            },
+            "development": {
+              "browserTarget": "pavaozinho:build:development",
+              "serverTarget": "pavaozinho:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
