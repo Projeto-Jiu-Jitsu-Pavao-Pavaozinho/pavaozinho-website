@@ -1,6 +1,6 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { DatoService } from 'src/app/services/dato.service';
 import { BlogPost } from '../../models/blog-post';
 import { DatePipe } from '@angular/common';
@@ -28,13 +28,19 @@ export class BlogPostComponent implements OnInit {
   public date: string | null = '';
 
   constructor(private blogService: DatoService, private activatedRoute: ActivatedRoute,
-    private title: Title, private datePipe: DatePipe, private meta: Meta) {}
+    private title: Title, private datePipe: DatePipe, private meta: Meta, private router: Router) {}
 
   public ngOnInit(): void {
-    const postSlug = this.activatedRoute.snapshot.params['slug'];
+    let postSlug = '';
+    const regex: RegExp = /\/(?:[^\/]+\/){2}([^\/]+)/;
+    const result: RegExpExecArray| null = regex.exec(this.router.url);
+    if(result) {
+      postSlug = result[1];
+    }
     this.blogService.getPostBySlug(postSlug).subscribe({
       next: res => {
         this.post = res.data.post;
+        console.log(res);
         this.title.setTitle(this.post?.titulo + ' | Blog Pavãozinho');
         this.date = this.datePipe.transform(this.post?._firstPublishedAt, 'dd/MM/yyyy hh:mm a');
         this.post?._seoMetaTags.forEach((tag) => {
