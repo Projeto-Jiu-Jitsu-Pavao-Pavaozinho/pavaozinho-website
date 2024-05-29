@@ -19,7 +19,6 @@ import { DatePipe } from '@angular/common';
   styles: [`
     .img-alt {
       color: #1E1E1E80;
-      wight: 400;
       font-size: 14px;
     }
   `]
