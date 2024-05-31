@@ -13,7 +13,6 @@ import { ButtonComponent } from './components/button/button.component';
 import { ColaborateCardComponent } from './components/colaborate-card/colaborate-card.component';
 import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { VoluntariadoComponent } from './pages/voluntariado/voluntariado.component';
-import { DoacaoComponent } from './pages/doacao/doacao.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { GaleryComponent } from './components/galery/galery.component';
 import { ModalContentComponent } from './components/modal-content/modal-content.component';
@@ -32,7 +31,6 @@ import { FormsModule } from '@angular/forms';
     ButtonComponent,
     ColaborateCardComponent,
     VoluntariadoComponent,
-    DoacaoComponent,
     NotFoundComponent,
     GaleryComponent,
     ModalContentComponent,
@@ -45,7 +43,6 @@ import { FormsModule } from '@angular/forms';
     RouterModule.forRoot([
     { path: '', component: HomeComponent },
     { path: 'voluntariado', component: VoluntariadoComponent, title: "Voluntariado | Projeto Social Pavão-Pavãozinho" },
-    { path: 'doacao', component: DoacaoComponent, title: "Como doar | Projeto Social Pavão-Pavãozinho" },
     { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
     { path: '**', component: NotFoundComponent, title: "Pagina não encontrada | Projeto Social Pavão-Pavãozinho" },
 ], {
