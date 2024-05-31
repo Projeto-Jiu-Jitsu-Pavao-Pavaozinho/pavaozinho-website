@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void {
     this.datorService.getAllBlogPosts().subscribe({
-      next: res => { this.posts = res.data.allPosts; console.log(this.posts[0].titulo)},
+      next: res => { this.posts = res.data.allPosts},
       error: error => console.log(error)
     })
   }
