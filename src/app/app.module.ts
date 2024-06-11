@@ -7,7 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageCoverComponent } from './components/page-cover/page-cover.component';
-import { ProjectCardComponent } from './project-card/project-card.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
 import { ColaborateCardComponent } from './components/colaborate-card/colaborate-card.component';
