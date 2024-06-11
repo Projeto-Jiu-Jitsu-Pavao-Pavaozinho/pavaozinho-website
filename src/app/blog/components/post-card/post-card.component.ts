@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { BlogPost } from '../models/blog-post';
+import { BlogPost } from '../../models/blog-post';
 import { DatePipe } from '@angular/common';
 
 @Component({
