@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent as BlogHome } from './blog/home/home.component';
 import { PostCardComponent } from './blog/components/post-card/post-card.component';
 import { BlogPost } from './blog/models/blog-post';
+import { BlogPostComponent } from './blog/components/blog-post/blog-post.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,10 @@ import { BlogPost } from './blog/models/blog-post';
     NgbModule,
     RouterModule.forRoot([
     { path: '', component: HomeComponent },
+    { path: 'blog', children: [
+      { path: '', component: BlogHome },
+      { path: 'post/:slug', component: BlogPostComponent }
+    ] },
     { path: '**', component: NotFoundComponent, title: "Pagina não encontrada | Projeto Social Pavão-Pavãozinho" },
 ], {
     initialNavigation: 'enabledBlocking'
