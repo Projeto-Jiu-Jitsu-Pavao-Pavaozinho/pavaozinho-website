@@ -158,7 +158,7 @@
           "builder": "@nguniversal/builders:prerender",
           "options": {
             "routes": [
-              "/"
+              "/", "/blog"
             ],
             "guessRoutes": false
           },
