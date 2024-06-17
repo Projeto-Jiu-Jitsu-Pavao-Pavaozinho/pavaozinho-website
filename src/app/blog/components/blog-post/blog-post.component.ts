@@ -64,8 +64,6 @@ export class BlogPostComponent implements OnInit, OnDestroy {
   }
 
   public  ngOnDestroy(): void {
-    console.log(this.post);
-    console.log(this.meta.getTags("name='meta'"));
 
     this.post?._seoMetaTags.forEach((tag) => {
       if(tag.tag == 'meta') {
