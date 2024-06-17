@@ -69,7 +69,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
       if(tag.tag == 'meta') {
         
         // Removendo as tags da página de post ao destruir o elemento
-        this.meta.removeTag(`name='${tag.attributes.name}'`);
+        this.meta.removeTag(`name="${tag.attributes.name}"`);
       }
     })
   }

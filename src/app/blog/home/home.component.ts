@@ -25,6 +25,6 @@ export class HomeComponent implements OnInit, OnDestroy{
   }
 
   ngOnDestroy(): void {
-    this.meta.removeTag("name = 'description'");
+    this.meta.removeTag('name="description"');
   }
 }
