@@ -7,7 +7,6 @@ import { BlogPostComponent } from './components/blog-post/blog-post.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, title: 'Blog | Projeto Social Pavão-Pavãozinho'},
-  { path: 'post/campeonato-brasileiro-criancas-2024', component: BlogPostComponent, title: 'Campeonato Brasileiro Crianças 2024 | Blog Pavãozinho' },
   {path: 'post/:slug', component: BlogPostComponent}
 ]
 
