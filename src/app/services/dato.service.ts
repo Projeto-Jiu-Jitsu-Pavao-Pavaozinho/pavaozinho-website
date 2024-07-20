@@ -40,4 +40,9 @@ export class DatoService{
     const query = `{ post(filter: {slug: {eq: "${slug}"}}) { id, slug, _firstPublishedAt, titulo, corpo, capa{ url, alt }, _seoMetaTags{ tag, content, attributes } } }`
     return this.http.get<BlogPost[]>(`${this.url}?query=${encodeURIComponent(query)}`, this.httpOptions);
   }
+
+  public getDocuments(): Observable<any> {
+    const query = `{ documento {id, slug, titulo, arquivo {url}} }`;
+    return this.http.get<any>(`${this.url}?query=${encodeURIComponent(query)}`, this.httpOptions);
+  }
 }
