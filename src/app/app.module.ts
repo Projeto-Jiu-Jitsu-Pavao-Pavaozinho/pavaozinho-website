@@ -18,6 +18,7 @@ import { ModalContentComponent } from './components/modal-content/modal-content.
 import { ImageComponent } from './components/image/image.component';
 import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-button.component';
 import { FormsModule } from '@angular/forms';
+import { TransparenciaComponent } from './pages/transparencia/transparencia.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FormsModule } from '@angular/forms';
     RouterModule.forRoot([
     { path: '', component: HomeComponent },
     { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
+    { path: 'transparencia', component: TransparenciaComponent, title: 'Transparência | Projeto Social Pavão-Pavãozinho' },
     { path: '**', component: NotFoundComponent, title: "Pagina não encontrada | Projeto Social Pavão-Pavãozinho" },
 ], {
     initialNavigation: 'enabledBlocking'
