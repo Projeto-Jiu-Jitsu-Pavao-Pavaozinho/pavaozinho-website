@@ -1,0 +1,13 @@
+.img-thumbnail {
+    background-color: transparent;
+    border: none;
+}
+
+.h3 {
+    color: initial;
+}
+
+a {
+    display: block;
+    width: 200px;
+}
