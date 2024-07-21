@@ -18,29 +18,11 @@
     
             <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item" ngbDropdown>
-                        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown1" role="button">Sobre</a>
-                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Quem somos</a>
-                            <a ngbDropdownItem href="https://www.atados.com.br/ong/projeto-social-jiu-jitsu-pavao-pavaozinho/vagas"
-                            target="_blank">Trabalhe conosco</a>
-                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Nosso time</a>
-                        </div>
+                    <li class="nav-item">
+                        <a href="/" class="nav-link" tabindex="0" id="navbarDropdown1" role="button">Início</a>
                     </li>
-                    <li class="nav-item" ngbDropdown>
-                        <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button">Projetos</a>
-                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Jiu-Jitsu</a>
-                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Yoga</a>
-                        </div>
-                    </li>
-                    <li class="nav-item" ngbDropdown>
-                        <a href="/transparencia" class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown3" role="button">Transparência</a>
-                        <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-end">
-                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Estatuto</a>
-                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Atas</a>
-                            <a ngbDropdownItem href="#" (click)="$event.preventDefault()">Relatórios financeiros</a>
-                        </div>
+                    <li class="nav-item">
+                        <a href="/transparencia" class="nav-link" tabindex="0" id="navbarDropdown3" role="button">Transparência</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" tabindex="0" role="button" routerLink="/blog">Blog</a>
