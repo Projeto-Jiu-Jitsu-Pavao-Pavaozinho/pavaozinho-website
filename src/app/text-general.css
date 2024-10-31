@@ -1,22 +1,18 @@
 .standard-title {
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
-    font-weight: 700;
     margin-bottom: 23px;
-  }
-
-  .black-text {
-    color: #262626;
-  }
-
-  .white-text {
-    color: #FFF;
+    color: var(--cardinal);
+    font-family: var(--primaria);
+    font-weight: 800;
   }
 
   .standard-paragraph {
-    font-size: 25px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
     text-align: justify;
+    font-family: var(--secundaria);
+    margin-bottom: 0;
   }
 
   .article-body {
@@ -25,8 +21,8 @@
     text-align: justify;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 480px) {
     .standard-title {
-        font-size: 35px;
+        font-size: 26px;
     }
   }

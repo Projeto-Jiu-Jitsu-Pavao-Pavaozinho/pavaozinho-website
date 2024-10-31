@@ -2,44 +2,198 @@ section {
     padding: 75px 10%;
 }
 
-.white-bg {
-    background-color: #FAF5F1;
+#video-institucional {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--jet);
 }
 
-.black-bg {
-    background-color: #262626;
+#video-institucional iframe {
+    width: 50%;
+    height: 350px;
+    margin: 0 auto 23px;
+}
+
+#video-institucional a {
+    font-family: var(--secundaria);
+    color: var(--jet);
+    font-size: 16px;
+    background-color: var(--snow);
+    border: none;
+    border-radius: 4px;
+    width: 50%;
+    font-weight: 700;
+    padding: 10px 0;
+    margin: auto;
+}
+
+.standard-title span {
+    font-family: var(--primary);
+    color: var(--snow);
 }
 
 .about-container {
     display: flex;
     flex-direction: column;
-    row-gap: 23px;
+    row-gap: 13px;
 }
 
-.projects-container {
+#sobre {
+    background-color: var(--snow);
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.galery-container{
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.row-block {
+    animation: 35s slide infinite linear;
+    display: inline-block;
+}
+
+.galery-row:hover .row-block {
+    animation-play-state: paused;
+}
+
+.metrics {
     display: flex;
+    gap: 1rem;
     justify-content: space-around;
 }
 
-.colabore-container {
-    width: 90%;
-    text-align: center;
+.metric {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
 }
 
-.colabore-cards {
+.metric-icon {
+    background-color: var(--cardinal);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.metric-number {
+    font-family: var(--primaria);
+    color: var(--cardinal);
+    font-weight: 700;
+}
+
+.metric-title {
+    font-family: var(--primaria);
+    font-weight: 400;
+}
+
+#team {
     display: flex;
-    gap: 40px;
-    margin-top: 30px;
-    align-items: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+#team .card {
+    background-color: var(--cardinal);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-bottom: 0;
+}
+
+#team .card-title {
+    font-family: var(--secundaria);
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+#team .role {
+    font-style: italic;
+    font-weight: 500;
+}
+
+#team .card-text {
+    font-family: var(--secundaria);
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.voluntario-profile-pic {
+    width: 100%;
+    height: auto;
+}
+
+.team-button {
+    color: var(--cardinal);
+    font-family: var(--secundaria);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+#form-voluntario {
+    background-color: var(--jet);
+    padding: 3rem 1rem 1rem;
+    border-radius: 8px;
+}
+
+.form-label {
+    color: #FFFFFF;
+    font-family: var(--primaria);
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.form-control {
+    background-color: #D9D9D9;
+}
+
+.button {
+    background-color: var(--snow);
+    font-family: var(--secundaria);
+    color: var(--jet);
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+.parceiros-sc {
+    background-color: var(--snow);
 }
 
 .parceiros-item {
     width: 150px;
 }
 
+.parceiros {
+    overflow: hidden;
+}
+
 .newsletter {
     text-align: center;
     padding-bottom: 0;
+    background-color: var(--snow);
 }
 
 .newsletter-form {
@@ -52,14 +206,16 @@ section {
     padding: 5px 10px;
     border: 1px solid #262626;
     background-color: transparent;
+    border-radius: 4px;
 }
 
 .submit-button {
     border: none;
-    text-transform: uppercase;
-    background-color: #262626;
-    color: #FAF5F1;
-    border-radius: 10px;
+    font-family: var(--primaria);
+    font-weight: 700;
+    background-color: var(--carmina);
+    color: #FFFFFF;
+    border-radius: 4px;
     width: 115px;
     padding: 15px;
 }
@@ -88,3 +244,20 @@ section {
         flex-direction: column;
     }
 }
+
+@media screen and (max-width: 700px) {
+   .metrics {
+    flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 768px) {
+    #team {
+        flex-direction: column;
+        row-gap: 5rem;
+    }
+
+    #video-institucional iframe {
+        width: 100%;
+    }
+ }

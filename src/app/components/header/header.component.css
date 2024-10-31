@@ -1,10 +1,30 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    -webkit-box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.1);
+    box-shadow: 4px 4px 3px 0px rgba(0,0,0,0.1);
+}
+
 nav {
-    background-color: #000000;
+    background-color: var(--jet);
     --bs-navbar-color: #FFF;
     --bs-navbar-brand-color: #FFF;
-    --bs-navbar-hover-color: #c3c3c3;
+    --bs-navbar-hover-color: var(--cardinal);
     --bs-navbar-brand-hover-color: #c3c3c3;
     --bs-navbar-toggler-icon-bg: url("../../../assets/list.svg");
+}
+
+.container-fluid {
+    padding: 0 1rem;
+}
+
+.nav-link {
+    font-family: var(--primaria);
+    font-weight: 800;
+    font-size: 14px;
 }
 
 .navbar-brand {
@@ -13,18 +33,9 @@ nav {
 
 .navbar-toggler {
     border: none;
+    padding: 0;
 }
 
 .navbar-toggler:focus {
     box-shadow: none;
-}
-
-.btn {
-    background-color: #df3227;
-    border: none;
-    width: 50%;
-}
-
-.btn:hover {
-    background-color: #f73b2e;;
 }

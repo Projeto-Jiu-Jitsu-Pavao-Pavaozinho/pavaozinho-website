@@ -1,5 +1,5 @@
 .banner-home {
-    background-image: url("../../../assets/home-cover.jpeg");
+    background-image: url("../../../assets/home-cover.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -15,8 +15,16 @@
 
 .banner-title {
     color: #FBF5F1;
-    font-weight: 700;
+    font-weight: 800;
     margin: auto;
+    font-family: var(--primaria);
+    font-size: 48px;
+    width: 30%;
+}
+
+.banner-title span {
+    color: var(--cardinal);
+    font-family: var(--primaria);
 }
 
 @media screen and (max-width: 1000px) {
@@ -25,8 +33,28 @@
     }
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 480px) {
     .banner-title {
-        font-size: 50px;
+        font-size: 35px;
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .banner-title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .banner-title {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .banner-title {
+        font-size: 20px;
     }
 }
