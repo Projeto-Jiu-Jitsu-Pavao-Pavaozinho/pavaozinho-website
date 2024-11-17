@@ -101,52 +101,10 @@ section {
     display: flex;
 }
 
-.cards {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-}
-
-#team .card {
-    background-color: var(--cardinal);
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem;
-    margin-bottom: 0;
-}
-
-#team .card-title {
-    font-family: var(--secundaria);
-    font-weight: 700;
-    color: #FFFFFF;
-    margin-bottom: 0;
-}
-
-#team .role {
-    font-style: italic;
-    font-weight: 500;
-}
-
-#team .card-text {
-    font-family: var(--secundaria);
-    font-weight: 400;
-    color: #FFFFFF;
-}
-
-.card-body {
-    padding: 0;
-}
-
-.voluntario-profile-pic {
-    width: 100%;
-    height: auto;
-}
-
-.team-button {
-    color: var(--cardinal);
-    font-family: var(--secundaria);
-    font-weight: 700;
-    font-size: 14px;
+@media screen and (min-width: 992px) {
+    .team-form{
+        width: 50vw;
+    }
 }
 
 #form-voluntario {
