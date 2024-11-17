@@ -3,8 +3,8 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 32px;
     row-gap: 32px;
-    padding: 40px 10%;
-    background-color: #000000;
+    padding: 40px 10% 0;
+    background-color: var(--jet);
 }
 
 .list-title {
@@ -39,7 +39,7 @@
 .footer-span {
     padding: 30px 10px;
     text-align: center;
-    background-color: #000000;
+    background-color: var(--jet);
     display: block;
     font-family: 'Hanken Grotesk', sans-serif;
     color: #FFF;

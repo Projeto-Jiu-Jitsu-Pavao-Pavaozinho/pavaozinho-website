@@ -8,6 +8,10 @@ import { ModalContentComponent } from '../modal-content/modal-content.component'
     <img class="rounded mx-auto" [src]="url" (click)="open()">
   `,
   styles: [`
+  :host {
+    padding: 0 0.5rem;
+  }
+
   img {
     height: 200px;
   }

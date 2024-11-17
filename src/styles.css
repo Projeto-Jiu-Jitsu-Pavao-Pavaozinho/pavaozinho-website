@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     font-family: 'Inter', sans-serif;
+}
+
+:root {
+	/*declarando as variaveis de cores do template*/
+	--jet: #2A2B2E;
+	--snow: #FCF7F8;
+	--cardinal: #B63744;
+	--slate-gray: #76818E;
+	--carmina: #951E1E;
+
+	/*declarando as variáveis de fontes fontes*/
+	--primaria: "Poppins", sans-serif;
+	--secundaria: "Inter", sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */

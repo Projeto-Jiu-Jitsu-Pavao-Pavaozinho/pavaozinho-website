@@ -1,39 +1,89 @@
 <app-page-cover></app-page-cover>
+<section id="video-institucional">
+  <h2 class="standard-title"><span>Conheça o projeto! </span>Confira nossos vídeos institucionais...</h2>
+  <iframe src="https://www.youtube.com/embed/ifXEaS4RkIo" title="PPJJ video" frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <a href="https://www.youtube.com/@pavaozinhojiujitsu" target="_blank">Veja mais vídeos...</a>
+</section>
 <section class="white-bg" id="sobre">
-    <h2 class="standard-title black-text">Quem somos</h2>
+    <h2 class="standard-title">Quem somos</h2>
     <div class="about-container">
         <p class="standard-paragraph black-text">Bem-vindo à Pavão-Pavãozinho, uma ONG enraizada na comunidade do Rio de Janeiro, Brasil, comprometida em transformar vidas por meio do jiu-jítsu e yoga. Nossa missão vai além do tatame, buscamos formar caráter e inspirar futuros brilhantes.</p>
         <p class="standard-paragraph black-text">Na Pavão-Pavãozinho, acreditamos no poder transformador do esporte. Oferecemos aulas de jiu-jítsu e yoga para crianças e adultos, visando não apenas o desenvolvimento físico, mas também a construção de valores sólidos. Buscamos moldar não apenas atletas habilidosos, mas cidadãos comprometidos e resilientes.</p>
     </div>
-</section>
-<section class="black-bg" id="projetos">
-    <h2 class="standard-title white-text">Nossos Projetos</h2>
-    <div class="projects-container">
-        <app-project-card title="Aulas de Jiu-Jitsu" cover="assets/jiu-jitsu.jpg"></app-project-card>
-        <app-project-card title="Aulas de Yoga" cover="assets/ioga.jpg"></app-project-card>
-    </div>
-</section>
-<section class="white-bg" id="colabore">
-    <div class="colabore-container">
-        <div class="text-div">
-            <h2 class="standard-title black-text">Nos ajude a transformar vidas</h2>
-            <p class="standard-paragraph black-text">A Pavãozinho depende da generozidade de pessoas que querem ver a mudança acontecer para continuar impactando vidas através dos projetos. Venha fazer parte!</p>
+    <div class="galery-row">
+      <div class="galery-container">
+        <div class="row-block galery-line-2">
+          <app-image url="../../assets/galeria/1.jpeg"></app-image>
+          <app-image url="../../assets/galeria/2.jpeg"></app-image>
+          <app-image url="../../assets/galeria/4.jpg"></app-image>
+          <app-image url="../../assets/galeria/3.jpeg"></app-image>
+          
         </div>
-        <div class="colabore-cards">
-            <app-colaborate-card title="Faça uma doação de qualquer valor"
-            paragraph="Ajude à Pavãozinho custear suas atividades e continuar impactando vidas."
-            btnTitle="Doar" link="https://www.paypal.com/donate/?hosted_button_id=QXESBRFF9WWEL"
-            ></app-colaborate-card>
-            <app-colaborate-card title="Venha fazer parte do nosso time"
-            paragraph="Venha contribuir com nosso time de talentos, fanzendo o projeto acontecer."
-            btnTitle="Seja voluntário" link="https://www.atados.com.br/ong/projeto-social-jiu-jitsu-pavao-pavaozinho/vagas"
-            ></app-colaborate-card>
+        <div class="row-block galery-line-2">
+          <app-image url="../../assets/galeria/1.jpeg"></app-image>
+          <app-image url="../../assets/galeria/2.jpeg"></app-image>
+          <app-image url="../../assets/galeria/4.jpg"></app-image>
+          <app-image url="../../assets/galeria/3.jpeg"></app-image>
         </div>
     </div>
+    </div>
+    <h2 class="standard-title">Resultados</h2>
+    <ul class="metrics">
+      <li class="metric">
+        <img class="metric-icon" src="../../../assets/icons/profile-2user.svg" alt="">
+        <div class="text-container">
+          <p class="metric-number">+ 150</p>
+          <p class="metric-title">Alunos atendidos</p>
+        </div>
+      </li>
+      <li class="metric">
+        <img class="metric-icon" src="../../../assets/icons/medal-star.svg" alt="">
+        <div class="text-container">
+          <p class="metric-number">+ 80</p>
+          <p class="metric-title">Medalhas conquistadas</p>
+        </div>
+      </li>
+      <li class="metric">
+        <img class="metric-icon" src="../../../assets/icons/user-tag.svg" alt="">
+        <div class="text-container">
+          <p class="metric-number">+ 1.350</p>
+          <p class="metric-title">Horas/aula de Jiu-Jitsu</p>
+        </div>
+      </li>
+    </ul>
 </section>
-<app-galery></app-galery>
-<section class="white-bg newsletter">
-  <h2 class="standard-title black-text">Assine nossa newsletter</h2>
+<section id="team">
+  <div class="container-lg team-form">
+    <h2 class="standard-title">Seja um voluntário!</h2>
+    <form id="form-voluntario">
+      <div class="mb-3">
+        <label for="inputNome" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="inputNome">
+      </div>
+      <div class="mb-3">
+        <label for="inputEmail1" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="inputDate" class="form-label">Data de nascimento:</label>
+        <input type="date" class="form-control" id="inputDate">
+      </div>
+      <div class="mb-3">
+        <label for="inputFuncao" class="form-label">Função/área desejada:</label>
+        <input type="text" class="form-control" id="inputFuncao">
+      </div>
+      <div class="mb-3">
+        <label for="inputFuncao" class="form-label">Resuma sua experiência profissional:</label>
+        <textarea id="inputFuncao" class="form-control"></textarea>
+      </div>
+      <a class="button">Enviar inscrição</a>
+    </form>    
+  </div>
+</section>
+<section class="newsletter">
+  <h2 class="standard-title">Assine nossa newsletter</h2>
   <p>Fique por dentro das novidades!</p>
   <form class="newsletter-form" action="">
     <input [(ngModel)]="emailInput" class="email-input" type="email" name="email" id=""
@@ -66,15 +116,12 @@
     </ng-container>
   </div>
 </section>
-<section class="white-bg">
-    <h2 class="standard-title black-text">Parceiros</h2>
+<section class="parceiros-sc">
+    <h2 class="standard-title">Parceiros</h2>
     <div class="container text-center">
-        <div class="row">
+        <div class="parceiros row">
           <div class="col">
             <img class="parceiros-item" src="../../../assets/parceiros/SEDA-COLLEGE.png" alt="">
-          </div>
-          <div class="col">
-            <img class="parceiros-item" src="../../../assets/parceiros/betagora.png" alt="">
           </div>
           <div class="col">
             <img class="parceiros-item" src="../../../assets/parceiros/Viva-Rio.webp" alt="">

@@ -13,10 +13,8 @@ import { ButtonComponent } from './components/button/button.component';
 import { ColaborateCardComponent } from './components/colaborate-card/colaborate-card.component';
 import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { GaleryComponent } from './components/galery/galery.component';
 import { ModalContentComponent } from './components/modal-content/modal-content.component';
 import { ImageComponent } from './components/image/image.component';
-import { WhatsappButtonComponent } from './components/whatsapp-button/whatsapp-button.component';
 import { FormsModule } from '@angular/forms';
 import { TransparenciaComponent } from './pages/transparencia/transparencia.component';
 
@@ -31,10 +29,8 @@ import { TransparenciaComponent } from './pages/transparencia/transparencia.comp
     ButtonComponent,
     ColaborateCardComponent,
     NotFoundComponent,
-    GaleryComponent,
     ModalContentComponent,
-    ImageComponent,
-    WhatsappButtonComponent
+    ImageComponent
   ],
   imports: [
     BrowserModule,
