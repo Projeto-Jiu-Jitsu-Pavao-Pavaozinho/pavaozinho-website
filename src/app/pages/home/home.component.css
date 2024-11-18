@@ -113,6 +113,10 @@ section {
     border-radius: 8px;
 }
 
+#form-voluntario button {
+    width: 100%;
+}
+
 .form-label {
     color: #FFFFFF;
     font-family: var(--primaria);
@@ -200,6 +204,7 @@ section {
 
     .newsletter-form {
         flex-direction: column;
+        align-items: center;
     }
 }
 
