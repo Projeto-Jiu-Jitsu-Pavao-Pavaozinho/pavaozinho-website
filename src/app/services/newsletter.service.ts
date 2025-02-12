@@ -8,7 +8,7 @@ export class NewsletterService {
   public ongoin: WritableSignal<boolean> = signal(false);
   public responseStatus: WritableSignal<HttpStatusCode> = signal(HttpStatusCode.Unused);
 
-  private url: string = "https://newsletter-h12u.onrender.com";
+  private url: string = "http://13.58.109.241:8055/items/InscricaoNewsnetter?access_token=QsTrdFJk-JCYmeBtczBGDUUgt1OerK5R";
 
   constructor(private http: HttpClient) { }
 
