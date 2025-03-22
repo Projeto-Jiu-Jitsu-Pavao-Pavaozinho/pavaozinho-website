@@ -1,5 +1,6 @@
 import { HttpClient, HttpStatusCode } from '@angular/common/http';
 import { Injectable, WritableSignal, signal } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class NewsletterService {
   public ongoin: WritableSignal<boolean> = signal(false);
   public responseStatus: WritableSignal<HttpStatusCode> = signal(HttpStatusCode.Unused);
 
-  private url: string = "https://newsletter-h12u.onrender.com";
+  private url: string = "https://cms.causatech.xyz/items/InscricaoNewsnetter?access_token=" + environment.directusApiKey;
 
   constructor(private http: HttpClient) { }
 
