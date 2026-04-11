@@ -93,10 +93,10 @@
           "builder": "@ngx-env/builder:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pavaozinho:build:production"
+              "buildTarget": "pavaozinho:build:production"
             },
             "development": {
-              "browserTarget": "pavaozinho:build:development"
+              "buildTarget": "pavaozinho:build:development"
             }
           },
           "defaultConfiguration": "development"
