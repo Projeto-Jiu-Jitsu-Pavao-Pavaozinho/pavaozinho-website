@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Article } from '../models/article';
 import { BlogPost } from '../blog/models/blog-post';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class DatoService{
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': `Bearer ${process.env['NG_APP_DATO_KEY']}`
+      'Authorization': `Bearer ${environment.datoApiKey}`
     })
   }
 
